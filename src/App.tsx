@@ -39,9 +39,9 @@ export default function App() {
               Hello
             </Heading>
           </div>
-          <p className="mt-6 text-base leading-7 font-sans line-clamp-none">
+          <p className="mt-6 text-base leading-7 font-sans line-clamp-none text-4">
             This is a minimal, browser-based text editor for people who are looking
-            for a minimalistic place to write their thouights on the internet, uninterrupted.
+            for a minimalistic place to write their thoughts on the internet, uninterrupted.
           </p>
         </div>
       </Flex>
