@@ -204,7 +204,7 @@ export default function Plum() {
   return (
     <div
       className="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden -z-1"
-      style={{ mask: "radial-gradient(circle, transparent, black)" }}
+      style={{ mask: "url(radial-gradient(circle, transparent, black))" }}
     >
       <canvas width={600} height={600} ref={el} />
     </div>

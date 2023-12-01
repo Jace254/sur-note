@@ -16,10 +16,10 @@ export default function App() {
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
-  
+
   return (
     <div
-      className="group relative flex bg-gray-12  justify-center h-screen w-screen text-bronze-7"
+      className="group relative flex bg-grayA-12  justify-center h-screen w-screen text-bronze-7"
       onMouseMove={handleMouseMove}
     >
       <Plum/>
