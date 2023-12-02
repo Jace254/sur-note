@@ -45,8 +45,10 @@ export default function Plum() {
     start(width, height);
   };
 
-  let steps: Function[] = [];
-  let tasks: Function[] = [];
+  type Fn = () => void
+
+  let steps: Fn[] = [];
+  let tasks: Fn[] = [];
 
   const step = (
     branch: Branch,
