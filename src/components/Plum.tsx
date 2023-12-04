@@ -1,6 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Plum() {
+  const [width, setWidth] = useState(window.innerWidth)
+  const [height,setHeight] = useState(window.innerHeight)
   const r180 = Math.PI;
   const r90 = Math.PI / 2;
   const r15 = Math.PI / 12;
@@ -23,8 +25,8 @@ export default function Plum() {
   let animationPlaying = true;
   const color = "#88888825";
 
-  const size = { width: window.innerWidth, height: window.innerHeight };
-  const len = 0.001;
+  const size = { width ,height };
+  const len = 1;
 
   const init = (width = 400, height = 400, _dpi?: number) => {
     const canvas = el!.current!;
@@ -200,8 +202,10 @@ export default function Plum() {
   };
 
   useEffect(() => {
-    if (size.width && size.height) init(size.width, size.height);
-  }, [size.width, size.height]);
+     setWidth(window.innerWidth)
+     setHeight(window.innerHeight)
+     init(width,height);
+  }, [window.innerWidth,window.innerHeight]);
 
   return (
     <div

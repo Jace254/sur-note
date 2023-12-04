@@ -3,7 +3,6 @@ import { useMotionValue } from "framer-motion";
 import { MouseEvent } from "react";
 import Nav from "./components/Nav";
 import GlowMouse from "./components/GlowMouse";
-import Plum from "./components/Plum";
 
 export default function App() {
 
@@ -19,20 +18,19 @@ export default function App() {
 
   return (
     <div
-      className="group relative flex bg-grayA-12  justify-center h-screen w-screen text-bronze-7"
+      className="group relative flex bg-grayA-12 h-screen w-screen text-bronze-3 font-light font-sans line-clamp-none text-4 -tracking-9 leading-6"
       onMouseMove={handleMouseMove}
     >
-      <Plum/>
-      <GlowMouse mx={mouseX} my={mouseY}/>
-      <Flex className="flex-col w-full sm:max-w-[460px]">
+      <Flex className="flex-row w-full">
         <Nav />
-        <div className=" py-3 px-4">
-          <div className="mt-2 flex items-center gap-x-2">
-            <Heading className="font-bold tracking-tight text-bronze-6">
+        <div className=" py-5 px-4 sm: max-w-[460px] col m-auto mt-0">
+          <GlowMouse mx={mouseX} my={mouseY}/>
+          <div className="flex items-center gap-x-2">
+            <Heading className="font-bold tracking-tight text-bronze-3">
               Hello
             </Heading>
           </div>
-          <p className="mt-6 text-base leading-7 font-sans line-clamp-none text-4">
+          <p className="mt-4">
             This is a minimal, browser-based text editor for people who are looking
             for a minimalistic place to write their thoughts on the internet, uninterrupted.
           </p>

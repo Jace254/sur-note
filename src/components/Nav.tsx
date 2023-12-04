@@ -11,7 +11,7 @@ export default function Nav() {
           "--highlight": "255 255 255",
 
           "--bg-color": "linear-gradient(var(--background), var(--background))",
-          "--border-color": `linear-gradient(90deg,
+          "--border-color": `linear-gradient(180deg,
             rgb(var(--highlight) / 0.001) 0%,
             rgb(var(--highlight) / 0.5) 33.33%,
             rgb(var(--highlight) / 0.6) 66.67%,
@@ -19,16 +19,17 @@ export default function Nav() {
           `,
         } as CSSProperties
       }
-      className=" py-4 px-3 items-center row justify-between w-full border-b-2 border-transparent [background:padding-box_var(--bg-color),border-box_var(--border-color)]"
+      className=" py-4 px-3 items-center flex-col justify-between sm:border-r-1 sm:border-transparent sm:[background:padding-box_var(--bg-color),border-box_var(--border-color)] border-gray-11 border-r w-auto"
     >
       <Link className="font-mono text-brown-1 text-xl" href="/">
-        Sur Editor
+        Sur
       </Link>
-      <Link href="https://github.com/Jace254/sur-note" target="_blank">
-        <IconButton variant="soft" color="orange">
+
+      <IconButton variant="soft" color="orange" asChild>
+        <a href="https://github.com/Jace254/sur-note" target="_blank">
           <GitHubLogoIcon width="18" height="18" />
-        </IconButton>
-      </Link>
+        </a>
+      </IconButton>
     </Flex>
   );
 }
