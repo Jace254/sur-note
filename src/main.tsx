@@ -11,5 +11,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Theme appearance="dark" accentColor="iris" grayColor="gray" panelBackground="solid" radius="small" scaling="95%">
       <App />
     </Theme>
-  </React.StrictMode>,
+   </React.StrictMode>,
 )

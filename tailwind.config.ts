@@ -13,7 +13,10 @@ const config: Config = {
   },
   presets: [radixThemePreset],
   plugins: [
-    Typography,
+    Typography({
+     className: '',
+     target: 'modern' 
+    }),
   ],
 }
 
