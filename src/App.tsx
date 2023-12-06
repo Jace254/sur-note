@@ -60,7 +60,7 @@ export default function App() {
 
   return (
     <div
-      className="group relative flex bg-grayA-12 h-screen w-screen text-bronze-3 font-light font-sans line-clamp-none text-4 -tracking-9 leading-6"
+      className="group relative flex bg-grayA-12 h-[100dvh]  w-screen text-bronze-3 font-light font-sans line-clamp-none text-4 -tracking-9 leading-6"
       onMouseMove={handleMouseMove}
     >
       <Flex className="flex-row w-full">
