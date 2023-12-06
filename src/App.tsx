@@ -1,6 +1,6 @@
 import { Flex } from "@radix-ui/themes";
 import { useMotionValue } from "framer-motion";
-import { MouseEvent, useEffect, useRef } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 import Nav from "./components/Nav";
 import GlowMouse from "./components/GlowMouse";
 import {basicSetup, EditorView} from "codemirror"
@@ -9,7 +9,7 @@ import {basicSetup, EditorView} from "codemirror"
 export default function App() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0)
-  const editor = useRef<EditorView>(null)
+  const [editor,setEditor] = useState<EditorView>(null)
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     const { left, top } = currentTarget.getBoundingClientRect();
@@ -43,7 +43,7 @@ export default function App() {
   }, {dark: true})
 
   useEffect(() => {
-    if(editor.current === null) {
+    if(editor === null) {
       const view = new EditorView({
         doc: "Welcome to Sur Editor",
         parent: el.current!,
@@ -52,7 +52,7 @@ export default function App() {
           theme,
         ]
       })
-      editor.current = view
+      setEditor(view)
     }
   },[editor])
   
