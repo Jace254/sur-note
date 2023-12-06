@@ -9,7 +9,7 @@ import {basicSetup, EditorView} from "codemirror"
 export default function App() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0)
-  const [editor,setEditor] = useState<EditorView>(null)
+  const [editor,setEditor] = useState<EditorView | null>(null)
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     const { left, top } = currentTarget.getBoundingClientRect();
