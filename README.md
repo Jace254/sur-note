@@ -1,5 +1,12 @@
-# Sur-Note_Editor
+# Sur-Note
 
-This is a minimal, browser-based text editor for people who are looking
+A text editor
 
-for a minimalistic place to write their thoughts on the internet, uninterrupted.
+## Todo:
+
+- [ ] Add wysiwyg options
+- [ ] Add markdown support
+- [ ] Add preview
+- [ ] Add filesystem access
+- [ ] Add typing animation delay on cursor
+
